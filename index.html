@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EVAMP</title>
+        <link href="index.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+    
+    <body>
+      <header role="banner">
+        <h1>EVAMP</h1>
+        <h2> [find events near your camp] </h2>
+      </header>
+          <form action="#" class="js-search-form">
+            <fieldset>
+             <legend>Let's Begin with your Campground</legend>
+             <label for="campQuery">Where</label>
+               <input aria-label="search-bar" type="text" class="js-camp-query" id="campQuery" placeholder="San Diego, CA" required />
+             <label for="eventStartQuery">Start Date</label>
+               <input type="date"  class="js-event-query" id="eventStartQuery" />
+             <label for="eventEndQuery">End Date</label>
+               <input type="date" 
+               class="js-event-query" id="eventEndQuery"/>
+             <button type="submit">Search</button>
+            </fieldset>
+          </form>
+          
+    <main role="main">
+      <div aria-live="assertive" id="campTitle"></div>
+        <div hidden class="js-camp-results"></div>
+      <div id="eventTitle"></div>
+        <div hidden class="js-event-results"></div>
+    </main>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+   
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLn_DZDbKqkwcQwNsNSOfuMyNv4NbiSTo&libraries=places"></script>
+  
+
+
+  </body>
+</html>
