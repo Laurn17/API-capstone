@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>EVAMP</title>
-        <link href="index.css" rel="stylesheet" type="text/css" />
-        
-    </head>
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>EVAMP</title>
+      <meta name="description" content="Finding events near your campground">
+      <link href="index.css" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Life+Savers:700" rel="stylesheet">
+  </head>
     
-    <body>
-      <header role="banner">
-        <h1>EVAMP</h1>
-        <h2> [find events near your camp] </h2>
-      </header>
-          <form action="#" class="js-search-form">
-            <fieldset>
-             <legend>Let's Begin with your Campground</legend>
-             <label for="campQuery">Where</label>
-               <input aria-label="search-bar" type="text" class="js-camp-query" id="campQuery" placeholder="San Diego, CA" required />
-             <label for="eventStartQuery">Start Date</label>
-               <input type="date"  class="js-event-query" id="eventStartQuery" />
-             <label for="eventEndQuery">End Date</label>
-               <input type="date" 
-               class="js-event-query" id="eventEndQuery"/>
-             <button type="submit">Search</button>
-            </fieldset>
-          </form>
+  <body>
+    <header role="banner">
+      <div id="top" class="dropdown">
+      <button class="dropdown-btn"> What? How?</button>
+      <div class="dropdown-content">
+        <p class="desc">
+          EVAMP is an app that connects you to events (<b>EV</b>amp) and campgrounds (ev<b>AMP</b>) in a United States or Canadian city of your choice.
+          <br><br>
+          <span>For US searches:</span> Enter the city and State you'd like to visit.
+          <br>
+          <span>For Canada searches:</span> Enter the city followed by "Canada" -- Ex. Montreal, Canada.
+          <br><br>     
+          Lastly, enter the day you plan to arrive and the day you plan to leave and search!
+        </P>
+      </div>
+    </div>
+
+      <h1 id="evamp">E V<img id="tent" src="https://i.imgur.com/9FNz1HX.png" alt="a green tent" />M P</h1>
+      <h2> find events near your camp. </h2>
+    </header>
+    
+    <form role="search" action="#" class="js-search-form">
+      <fieldset>
+        <legend>Let's Begin with your Campground</legend>
+        <div class="labelInput">
+        <label for="campQuery">Where:</label>
+          <input aria-label="search-bar" type="text" class="js-camp-query" id="campQuery" placeholder="San Diego, CA" required />
+        </div>
+        <div class="labelInput">
+        <label for="eventStartQuery">Start Date:</label>
+          <input type="date" required class="js-event-query" id="eventStartQuery" />
+        </div>
+        <div class="labelInput" >
+        <label for="eventEndQuery">End Date:</label>
+          <input type="date" 
+               class="js-event-query" required id="eventEndQuery"/>
+        </div>
+        <button id="formButton" type="submit">Search</button>
+      </fieldset>
+    </form>
           
     <main role="main">
-      <div aria-live="assertive" id="campTitle"></div>
+      <div class="camp-section" aria-live="assertive">
+        <h3 hidden id="campTitle">Campgrounds</h3>
         <div hidden class="js-camp-results"></div>
-      <div id="eventTitle"></div>
+      </div>
+      <div class="event-section" aria-live="assertive">
+        <h3 hidden id="eventTitle">Events</h3>
         <div hidden class="js-event-results"></div>
+        <button class="more eventsButton" hidden type="submit">More</button>
+      </div>
     </main>
+    
+    <footer role="contentinfo">
+      <p>Powered by Google Places and <a href="https://seatgeek.com/" target="_blank">Seatgeek.com</a> -- <a href="#top">Back to top</a></p>
+    </footer> 
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -41,7 +74,5 @@
    
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLn_DZDbKqkwcQwNsNSOfuMyNv4NbiSTo&libraries=places"></script>
   
-
-
   </body>
 </html>

@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #154360;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+h1 {
+  font-family: arial narrow;
+  margin-bottom: 0px;
+  margin-top: 17px;
+  color: white;
+  font-weight: 500;
+  font-size: 56px;
+}
+
+#tent {
+  width: 80px;
+  height: auto;
+}
+
+h2 {
+  margin-top: 0px;
+  color: white;
+  font-family: 'Life Savers', cursive;
+}
+
+#evamp, h2, form {
+  text-align: center;
+}
+
+.dropdown-btn {
+  display: block;
+  background: #F7DC6F;
+  color: white;
+  border: 1pt solid #F7DC6F;
+  margin-left: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 2px solid #F7DC6F;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+}
+
+.desc {
+  margin: 0;
+  padding: 7px;
+  font-family: arial narrow;
+}
+
+span {
+  text-decoration: underline;
+}
+
+form {
+  margin-top: 20px;
+  border: 1px solid #154360;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding-top: 10px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: arial Narrow;
+}
+
+legend {
+  margin-bottom: 6px;
+  margin-right: 0;
+  font-weight:bold;
+  color: maroon;
+}
+
+fieldset {
+  border: none;
+  text-align: center;
+}
+
+input {
+  border: 1pt solid  #F7DC6F;
+}
+
+input:focus, #formButton:focus {
+  border: 2pt solid darkorange;
+}
+
+#formButton, .more {
+  display: block;
+  margin-top: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  color: rgb(5, 9, 70);
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.camp-section {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.event-section {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+
+#campTitle, #eventTitle {
+  text-align: center;
+  color: white;
+  font-family: 'Life Savers', cursive; 
+  font-size: 22px;
+}
+
+.event-name, .camp-title {
+  margin-top: 1px;
+}
+
+.camp-container, .event-container {
+  display: inline-block;
+  width: 46%;
+  border: 2.5px solid #27AE60;
+  background: rgba(255, 255, 255, 0.9);
+  margin-right: 5px;
+  margin-left:5px;
+  padding: 6px;
+  margin-bottom: 8px;
+  font-family: arial narrow;
+  text-align: left;
+}
+
+.campImg, .eventImg {
+  width: 70%;
+  height: auto;
+  border: 1pt solid #F7DC6F;
+}
+
+.more {
+  visibility: hidden;
+  margin-bottom: 55px;
+}
+
+.js-event-results, .js-camp-results {
+  margin-bottom: 20px;
+}
+
+.zero {
+  color: #F39C12;
+  font-size: 26px;
+  text-align: center;
+  font-family: arial narrow;
+}
+
+footer {
+  border-top: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+
+.labelInput, .labelInput Label{
+  display: inline-block;
+}
+
+@media only screen and (max-width: 838px) {
+  .labelInput label {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 597px) {
+ .labelInput {
+    display: block;
+    text-align: left;
+  }
+  fieldset {
+    text-align: left;
+  }
+  input {
+    width: 100%;
+  }
+  footer {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+ * {
+  box-sizing: border-box;
+ }
+ .camp-container, .event-container {
+  display: block;
+  width: 94%;
+ }
+ .event-container {
+  box-shadow: 0 0 8px rgb(28, 235, 114);
+ }
+}
