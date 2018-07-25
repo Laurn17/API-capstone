@@ -8,7 +8,7 @@ Camping in itself is fun. But being able to Uber/Lyft over to a fun event and th
 Javascript, JQuery
 
 #Screenshot:
-![screenshot](https://i.imgur.com/GWaJmTz.png)
+[screenshot](https://i.imgur.com/EKlJJlL.png)
 
 #Code Example
 	$('.js-search-form').on('submit', function(event) {
