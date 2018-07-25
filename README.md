@@ -1,25 +1,30 @@
-# EVAMP
+#EVAMP
 Find events near where you camp
+https://Evamp--laurn17.repl.co
 
-#Motivation:
-Camping in itself is fun. But being able to Uber/Lyft over to a fun event and then come back to the site to sleep for cheap would be Great!
+#Summary:
+Camping in itself is great, but long camp trips can become a bit dull. Knowing what events are near you, being able to Uber/Lyft over to the venue, and then come back to the site to sleep for cheap would be even better!
 
 #Code style:
-Javascript, JQuery
+Javascript, JQuery, HTML, CSS
 
 #Screenshot:
-[screenshot](https://i.imgur.com/EKlJJlL.png)
+![screenshot](hhttps://i.imgur.com/84bVp4Q.png)
 
-#Code Example
+
+#Code Example:
+	function onSubmit() {
 	$('.js-search-form').on('submit', function(event) {
 		event.preventDefault();
+		DATA.page = 1;
+    $('.js-event-results').html("");
 		var address = $('.js-camp-query').val();
-    geoLocateApiRequest(address);
-		var userStartDate = $("#eventStartQuery").val();
-    var userEndDate = $('#eventEndQuery').val();
+		var userStartDate = $('#eventStartQuery').val();
+		var userEndDate = $('#eventEndQuery').val();
+		geoLocateApiRequest(address);
 		eventApiRequest(address, userStartDate, userEndDate);
 	});
-};
+}
 
 #API Reference:
 Google/Geocode
