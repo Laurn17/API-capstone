@@ -9,7 +9,7 @@ Camping in itself is great, but long camp trips can become a bit dull. Knowing w
 Javascript, JQuery, HTML, CSS
 
 #Screenshot:
-![screenshot](hhttps://i.imgur.com/84bVp4Q.png)
+[screenshot](https://i.imgur.com/EKlJJlL.png)
 
 
 #Code Example:
